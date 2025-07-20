@@ -38,5 +38,5 @@ A web-based **Student Data Management System** built using **Django**, **Python*
 Follow these steps to run the project locally:
 
 1. **Clone the Repository**
-   ```bash
+   ```bash https://github.com/Omtechnayak/Student-Management-System.git
    git clone 
