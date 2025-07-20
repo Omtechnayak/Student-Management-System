@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+    <style>
+        body {
+            background-color:rgba(73, 69, 73, 1);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .form-container {
+            width: 400px;
+            margin: 60px auto;
+            background-color:#fff;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            color:white;
+            
+            
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .form-group input:focus {
+            border-color: #80bdff;
+            outline: none;
+        }
+
+        .btn-register {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: #fff;
+            font-size: 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-register:hover {
+            background-color: #218838;
+        }
+        a{
+            width:370px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2> Register</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">username:</label>
+                <input type="text" name="username" id="name" required placeholder="Enter your username">
+            </div>
+
+            <div class="form-group">
+                <label for="age">Password:</label>
+                <input type="password" name="password" id="password" required placeholder="Enter your password">
+            </div>
+
+            <div class="form-group">
+                <label for="age"> Confirm Password:</label>
+                <input type="password" name="confirm_password" id="password" required placeholder="Confirm password">
+            </div>
+
+
+            
+
+            <button type="submit" class="btn-register">Register</button><br><br>
+            <a href="{% url 'login' %}">For login Click here</a>
+
+        </form>
+    </div>
+</body>
+</html>
